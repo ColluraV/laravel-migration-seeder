@@ -28,16 +28,13 @@ class TrainTableSeeder extends Seeder
             $train->stazione_arrivo = $faker->city();
             $train->stazione_arrivo = $faker->city();
                 
-            if($train->stazione_partenza == $train->stazione_arrivo){
-                    $train->stazione_arrivo = $faker->city();
-                }
+
                 
             $train->orario_partenza = $faker->dateTimeInInterval('-1 week', '+1 week');
-            $train->orario_arrivo = $faker->dateTimeInInterval('-1 week', '+1 week');
+            $train->orario_arrivo = $faker->dateTimeInInterval('+1 week', '+2 week');
             
-            if($train->orario_partenza >= $train->orario_arrivo){
-                $train->orario_arrivo = $faker->city();
-            }
+
+            
             $train->codice_treno=$faker->numberBetween(1111, 9999);
             $train->numero_carrozza= $faker->numberBetween(4, 12);
             $train->in_orario=$faker->boolean();
