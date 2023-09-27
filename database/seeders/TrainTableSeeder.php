@@ -19,7 +19,7 @@ class TrainTableSeeder extends Seeder
         $compagnieFerroviarie=["Trenitalia", "Italo", "Deutsche Bahn", "Renfe", "Frecciargento", "Intercity Notte", "Eurocity", "InterCity", "TGV", "RegioExpress", "Frecciarossa", "Frecciabianca"];
 
 
-        for ($i = 0; $i < 10; $i++){
+        for ($i = 0; $i < 20; $i++){
             
             $train=new Trains();
 

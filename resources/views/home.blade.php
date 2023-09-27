@@ -13,8 +13,15 @@
         <h1>Lista Treni</h1>
 
         <div class="row row-col-2 text-center">
-         
-    @foreach ($trains as $train)
+    
+            
+            
+        @foreach ($trains as $train)
+           
+        @php
+            
+        @endphp
+        @if ($train->orario_partenza >= date("Y-m-d H:i:s"))
 
         <div class="card col-3 g-3 m-2">
 
@@ -29,8 +36,11 @@
             </div>
         </div>
 
+
+        @endif      
     @endforeach
-        </div>
+    
+    </div>
    {{--   --}}
     </main>
 </body>

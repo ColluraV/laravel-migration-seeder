@@ -11,10 +11,8 @@ class TrainController extends Controller
     public function index(){
         $trains = Trains::all();
         
-        @dump($trains);
-
         return view('home',["trains"=>$trains]);
-
+                
     }
    
 }
