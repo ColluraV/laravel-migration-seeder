@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\train;
 use App\Models\Train as ModelsTrain;
+use App\Models\Trains;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
@@ -20,7 +21,7 @@ class TrainTableSeeder extends Seeder
 
         for ($i = 0; $i < 10; $i++){
             
-            $train=new Train();
+            $train=new Trains();
 
 
             $train->azienda=$compagnieFerroviarie[array_rand($compagnieFerroviarie)];
